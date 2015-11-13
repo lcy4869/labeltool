@@ -1,16 +1,16 @@
-SQLAlchemy model backend integration examples.
+SQLAlchemy model backend integration.
 
-To run this example:
+To run this:
 
 1. Clone the repository::
 
-    git clone https://github.com/flask-admin/flask-admin.git
-    cd flask-admin
+    git clone https://github.com/qimoqiuguo/labeltool.git
+    cd labeltool
 
 2. Create and activate a virtual environment::
 
     virtualenv env
-    source env/bin/activate
+    source venv/bin/activate
 
 3. Install requirements::
 
@@ -18,4 +18,4 @@ To run this example:
 
 4. Run the applications::
 
-    python examples/hello/hello.py
+    python labeltool.py
