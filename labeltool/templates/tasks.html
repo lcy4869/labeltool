@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Labelling</title>
+      <link rel="stylesheet" href="../static/bs/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="../static/dist/themes/default/style.min.css" />
+
+  </head>
+  <body>
+
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">asdasd</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Datasets</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <!-- <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tasks <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="task-choice"><a href="#">2</a></li>
+                    <li class="task-choice"><a href="#">3</a></li>
+                    <li class="task-choice"><a href="#">4</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul> -->
+              <!-- <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Link</a></li>
+            </ul> -->
+              <form class="navbar-form navbar-right" action="/logout" method=post>
+
+                <button type="submit" class="btn btn-default btn-primary">Logout</button>
+              </form>
+
+
+
+              <!-- <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Column <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="col-choice"><a href="#">2</a></li>
+                    <li class="col-choice"><a href="#">3</a></li>
+                    <li class="col-choice"><a href="#">4</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul> -->
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+      <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col-md-3">
+
+              <div id="treeview1" class=""></div>
+
+            </div>
+
+            <div class="col-md-8">
+                <div  id  = "cols" class ="row">
+                    <div  class="col-md-6 col">
+                      <a href="#" id ="#" class="thumbnail">
+                          <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+                        <a href="#" id ="#" class="thumbnail">
+                            <img  src="../static/welcome.jpg" alt="...">
+                          </a>
+                        <a href="#" id ="#" class="thumbnail">
+                              <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+                    </div>
+                    <div  class="col-md-6 col">
+                      <a href="#" id ="#" class="thumbnail">
+                          <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+                        <a href="#" id ="#" class="thumbnail">
+                            <img  src="../static/welcome.jpg" alt="...">
+                          </a>
+                        <a href="#" id ="#" class="thumbnail">
+                              <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+                    </div>
+
+                </div>
+              </div>
+            <div id = "hehe" class="col-md-1">
+              <button id ="select_all" type="button" class="btn btn-danger" aria-label="Left Align">
+                <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+              </button>
+              select all
+              <br></br>
+              <button id ="wrong" type="button" class="btn btn-inverse" aria-label="Left Align">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+              </button>
+              wrong
+              <br></br>
+              <button id = "right" type="button" class="btn btn-success" aria-label="Left Align">
+                <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+              </button>
+              typical
+              <br></br>
+
+              <button id = "difficult" type="button" class="btn btn-primary" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </button>
+              difficult
+              <br></br>
+
+              <button id = "uncertain" type="button" class="btn btn-warning" aria-label="Left Align">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              </button>
+              uncertain
+
+              <br></br>
+                <button id="next" type="button" class="btn btn-default"> next</button>
+            </div>
+
+          </div>
+      </div>
+      <!-- 4 include the jQuery library -->
+      <script src="../static/bs/js/jquery.js"></script>
+
+    	<script src="../static/jstree/js/bootstrap-treeview.js"></script>
+      <script src="../static/bs/js/bootstrap.min.js"></script>
+      <!-- <script src="bs/js/npm.js"></script> -->
+
+      <script>
+      $(function() {
+        $("#hehe").empty();
+
+        $.get("/Task",function(result){
+          defaultData = [
+            {
+              text: 'logout',
+              href: '/logout',
+              tags: ['4'],
+              nodes: [
+                {
+                  text: 'Child 1',
+                  href: '#child1',
+                  tags: ['2'],
+                  nodes: [
+                    {
+                      text: 'Grandchild 1',
+                      href: '#grandchild1',
+                      tags: ['0']
+                    },
+                    {
+                      text: 'Grandchild 2',
+                      href: '#grandchild2',
+                      tags: ['0']
+                    }
+                  ]
+                },
+                {
+                  text: 'Child 2',
+                  href: '#child2',
+                  tags: ['0']
+                }
+              ]
+            },
+            {
+              text: 'Parent 2',
+              href: '#parent2',
+              tags: ['0']
+            },
+            {
+              text: 'Parent 3',
+              href: '#parent3',
+               tags: ['0']
+            },
+            {
+              text: 'Parent 4',
+              href: '#parent4',
+              tags: ['0']
+            },
+            {
+              text: 'Parent 5',
+              href: '#parent5'  ,
+              tags: ['asd']
+            }
+          ];
+          // alert(result);
+          $('#treeview1').treeview({
+            showTags: true,
+            levels: 1,
+            data: result,
+
+            onNodeSelected: function(event, data) {
+              if (data['href'] != "summary"){
+                window.location.href = "/Image?id="+data['href']+"&name="+data['text'];
+              }
+              else{
+                $("#hehe").empty();
+                // $("#cols").html("<h1>Summary</h1>"+data['text']);
+              }
+            }
+          });
+        });
+
+
+
+    });
+      // $(document).ready(function(){
+      //   // fillTask();
+      //
+      // });
+
+      // function fillTask(){
+      //   var tasks = document.getElementById("tasks");
+      //   var task = tasks.getElementsByTagName("A")[0];
+      //
+      //   $.get("/Task",function(result){
+      //     // alert(result);
+      //
+      //     var result= $.parseJSON(result);
+      //     var tmp = document.getElementById("tasks").childNodes;
+      //     while(tmp.length){
+      //       tmp[0].remove();
+      //     }
+      //     for (i=0; i<result.length; i++)
+      //     {
+      //       tmp = task.cloneNode(true);
+      //       tmp.innerHTML =  result[i].name+'<span class="badge">'+result[i].status+'</span>';
+      //       tmp.id = result[i].tasks_id;
+      //
+      //       tmp.getAttributeNode("href").value = "/Image?id="+tmp.id;
+      //       tasks.appendChild(tmp);
+      //
+      //     };
+      //
+      //   });
+      //
+      //
+      //
+      // }
+      </script>
+  </body>
+  </html>

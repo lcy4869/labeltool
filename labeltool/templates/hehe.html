@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Labelling</title>
+      <!-- <link rel="stylesheet" href="../static/bs/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="{{ url_for('static/bs/css/', filename='bootstrap.min.css')}}"
+      <link rel="stylesheet" href="../static/dist/themes/default/style.min.css" /> -->
+
+  </head>
+  <body>
+
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">asdasd</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">{{category}}</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li> -->
+                <li ><a href="#" id="progress">Link</a> </li>
+
+              </ul>
+
+
+
+              <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layout<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="col-choice"><a href="#">2</a></li>
+                    <li class="col-choice"><a href="#">3</a></li>
+                    <li class="col-choice"><a href="#">4</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"></a></li>
+
+                <li><a href="/">Return</a></li>
+
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div  class="col-md-11 col">
+
+        <ul class="list-inline" id="pic">
+          <!-- <li><a href="#" id ="#" class="thumbnail"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"/></a></li>
+          <li><a href="#" id ="#" class="thumbnail"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"/></a></li>
+          <li><a href="#" id ="#" class="thumbnail"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"/></a></li>
+          <li><a href="#" id ="#" class="thumbnail"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"/></a></li> -->
+          <li>
+            <div class="thumbnail rel-pos">
+              <a href="#"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"></a>
+              <div class="over-text">
+                <button type="button" class="btn btn-danger">haha</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="thumbnail rel-pos">
+              <a href="#"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"></a>
+              <div class="over-text">
+                <button type="button" class="btn btn-danger">haha</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="thumbnail rel-pos">
+              <a href="#"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"></a>
+              <div class="over-text">
+                <button type="button" class="btn btn-danger">haha</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="thumbnail rel-pos">
+              <a href="#"><img src="/Users/lcy/Dropbox/image/Chinese/Abacus_Seeds/Abacus_Seeds1.jpg"></a>
+              <div class="over-text">
+                <button type="button" class="btn btn-danger">haha</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-1">
+        <button id = "right" type="button" class="btn btn-success" aria-label="Left Align">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        postive(w)
+        <button id ="wrong" type="button" class="btn btn-danger" aria-label="Left Align">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        negative(q)
+        <button id = "uncertain" type="button" class="btn btn-primary" aria-label="Left Align">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+        </button>
+        uncertain(e)
+        <button id = "difficult" type="button" class="btn btn-info" aria-label="Left Align">
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        </button>
+        difficult
+
+        <button id = "pos_next" type="button" class="btn btn-success" aria-label="Left Align">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        pos&next
+        (shift+q)
+
+        <button id = "neg_next" type="button" class="btn btn-danger" aria-label="Left Align">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        neg&next
+        (shift+w)
+
+
+        <button id="pre" type="button" class="btn btn-default">pre</button>
+        shift+a
+        <button id="next" type="button" class="btn btn-default">next</button>
+        shift+s
+
+
+      </div>
+
+      </div>
+
+
+      <!-- 4 include the jQuery library -->
+      <script src="../static/bs/js/jquery.js"></script>
+
+      <script src="../static/bs/js/bootstrap.min.js"></script>
+      <script src="../static/js/label.js"></script>
+
+      <!-- <script src="bs/js/npm.js"></script> -->
+
+      <script>
+
+      $(document).ready(function(){
+        id = {{id}};
+        total = {{total}}; //该类所有图片数目
+        image_num = 4;
+        index = 0;
+        list = [];
+
+        $("#pic img").css({"width":window.innerWidth/2.5,"height":window.innerHeight/2.4});
+        showpage();
+        $("*").keyup(function(event){
+
+          //next page
+          if(event.shiftKey && event.which=="S".charCodeAt(0)){
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+              }
+            }
+            index = index + image_num;
+            showpage();
+          }
+          //last page
+          else if(event.shiftKey && event.which=="A".charCodeAt(0)){
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+              }
+            }
+            index = index - image_num;
+            if(index<0) index = 0;
+            showpage();
+          }
+          //pos&next page
+          else if (event.shiftKey &&event.which=="Q".charCodeAt(0)) {
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+                list[i].status = "positive;";
+              }
+            }
+            index = index + image_num;
+            showpage();
+          }
+          //neg&next page
+          else if(event.shiftKey && event.which=="W".charCodeAt(0)){
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+                list[i].status = "negative;";
+              }
+            }
+            index = index + image_num;
+            showpage();
+
+          }
+          //postive
+          else if (event.which=="Q".charCodeAt(0)) {
+            setPositive();
+          }
+          //negative
+          else if (event.which=="W".charCodeAt(0)) {
+            setNegative();
+          }
+          //uncertain
+          else if(event.which=="E".charCodeAt(0)){
+            setUncertain();
+          }
+          else if(event.which=="R".charCodeAt(0)){
+            addDifficult();
+          }
+
+        });
+
+        $("#next").click(function(){
+          index = index + image_num;
+          showpage();
+        });
+        $("#pos_next").click(function(){
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+                list[i].status = "positive;";
+              }
+            }
+            index = index + image_num;
+            showpage();
+        });
+        $("#neg_next").click(function(){
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+                list[i].status = "negative;";
+              }
+            }
+            index = index + image_num;
+            showpage();
+        });
+        $("#pre").click(function(){
+          index = index - image_num;
+          if(index<0) index = 0;
+          showpage();
+        });
+        $("#wrong").click(function(){
+          setNegative();
+        });
+        $("#right").click(function(){
+          setPositive();
+        });
+        $("#uncertain").click(function(){
+          setUncertain();
+        });
+        $("#difficult").click(function(){
+          addDifficult()
+        });
+
+        $(".col-choice").click(function(){
+          num = $(this).text();
+          image_num = num * num;
+          // alert(image_num);
+          if(num == "2"){
+            $("#pic img").css({"width":window.innerWidth*11/12/2.5,"height":window.innerHeight/2.4});
+            col_split(4);
+            showpage();
+
+          }
+          if(num == "3"){
+            $("#pic img").css({"width":window.innerWidth*11/12/3.5,"height":window.innerHeight/3.5});
+            col_split(9);
+            showpage();
+
+          }
+          if(num == "4"){
+            $("#pic img").css({"width":window.innerWidth*11/12/4.7,"height":window.innerHeight/4.5});
+            col_split(16);
+            showpage();
+
+          }
+
+
+        });
+        $(".thumbnail").click(function(){
+            if($(this).hasClass("on")){
+              addStatus($(this),list[find($(this).attr("id"))].status);
+            }
+            else{
+              addChoose($(this));
+            }
+        });
+
+
+      });
+
+      function col_split(num){
+        var cols = $("#pic");
+        var col = cols.find("li");
+        var tmp = col.first().clone(true);
+        cols.empty();
+        for (i=0; i<num; i++)
+        {
+         cols.append(tmp.clone(true));
+        }
+      }
+      function showpage(){
+//id,image_num,index
+//提交上一页的label结果
+        if (index > 1){
+          for (i=0; i<image_num;i++){
+            // alert(list[i].id+list[i].status);
+          }
+          $.ajax({
+            url: "/Insert",
+            type: 'post',
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            data: JSON.stringify({'label':list}),
+            success: function(data) {
+              alert(data);
+            }
+          });
+
+        }
+        if(index > total){
+          index = index-image_num;
+
+        }
+        else if(index <= 0){
+          index = 0;
+
+        }
+        $("#progress").text("Progess: "+index+"/"+total);
+
+        list = [];
+
+        $.get("/getImagePath", {id:id, num: image_num,index:index},function(result){
+          var jsonarray= $.parseJSON(result);
+          var i = 0;
+          // alert(result);
+          $.each(jsonarray,function(index,value){
+            init($(".thumbnail").eq(i),value);
+            // $(".thumbnail img").eq(i).attr("src", value.image_path);
+
+            image = new Object();
+            image.id=value.image_id;
+            image.status = value.status;
+            list.push(image);
+            i = i + 1;
+          });
+
+//如果有剩余
+          for (;i<image_num;i++){
+
+            value = new Object();
+            value.image_id = 0;
+            value.status = "unlabelled";
+            value.image_path = "../static/none.png";
+            //跟上面的一样！！！
+            $(".thumbnail img").eq(i).attr("src", value.image_path);
+            init($(".thumbnail").eq(i),value);
+
+
+            image = new Object();
+            image.id=value.image_id;
+            image.status = value.status;
+            list.push(image);
+
+          }
+        });
+
+
+      }
+      function find(id){
+        for (i=0; i<list.length; i++){
+          if(list[i].id == id){
+            return i;
+          }
+        }
+
+      }
+
+      function setPositive(){
+        $(".on").each(function(){
+          list[find($(this).attr("id"))].status = "positive;";
+          $(this).find("button").html("positive;");
+          addStatus($(this),list[find($(this).attr("id"))].status);
+
+        });
+      }
+      function setNegative(){
+        $(".on").each(function(){
+          list[find($(this).attr("id"))].status = "negative;";
+          $(this).find("button").html("negative;");
+          addStatus($(this),list[find($(this).attr("id"))].status);
+        });
+      }
+      function setUncertain(){
+        $(".on").each(function(){
+          list[find($(this).attr("id"))].status = "uncertain;";
+          $(this).find("button").html("uncertain;");
+          addStatus($(this),list[find($(this).attr("id"))].status);
+        });
+      }
+      function addDifficult(){
+        $(".on").each(function(){
+          if (list[find($(this).attr("id"))].status.indexOf("difficult") == -1){
+            list[find($(this).attr("id"))].status = list[find($(this).attr("id"))].status+"difficult;";
+            $(this).find("button").html($(this).find("button").html()+"difficult;");
+          }
+
+          addStatus($(this),list[find($(this).attr("id"))].status);
+        });
+      }
+
+      </script>
+  </body>
+  </html>

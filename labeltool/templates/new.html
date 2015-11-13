@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Labelling</title>
+      <link rel="stylesheet" href="../static/bs/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="../static/dist/themes/default/style.min.css" />
+
+  </head>
+  <body>
+
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">asdasd</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Category</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tasks <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="task-choice"><a href="#">2</a></li>
+                    <li class="task-choice"><a href="#">3</a></li>
+                    <li class="task-choice"><a href="#">4</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <form class="navbar-form navbar-right" action="/" method=post>
+                <button type="submit" class="btn btn-default btn-primary">Return</button>
+              </form>
+
+
+
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Column <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="col-choice"><a href="#">2</a></li>
+                    <li class="col-choice"><a href="#">3</a></li>
+                    <li class="col-choice"><a href="#">4</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+      <div class="container-fluid">
+
+          <div class="row">
+            <div  class="col-md-11">
+                <div  id  = "cols" class ="row">
+                    <div  class="col-md-4 col">
+
+                      <a href="#" id ="#" class="thumbnail">
+                          <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+                        <a href="#" id ="#" class="thumbnail">
+                            <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+
+                    </div>
+                    <div  class="col-md-4 col">
+                      <a href="#" id ="#" class="thumbnail">
+                          <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+                        <a href="#" id ="#" class="thumbnail">
+                            <img  src="../static/welcome.jpg" alt="...">
+                          </a>
+
+                    </div>
+                    <div  class="col-md-4 col">
+                      <a href="#" id ="#" class="thumbnail">
+                          <img  src="../static/welcome.jpg" alt="...">
+                        </a>
+                        <a href="#" id ="#" class="thumbnail">
+                            <img  src="../static/welcome.jpg" alt="...">
+                          </a>
+
+                    </div>
+
+
+                </div>
+              </div>
+          <div  class="col-md-1">
+            <div class="col-md-1">
+
+              <button id ="wrong" type="button" class="btn btn-inverse" aria-label="Left Align">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+              </button>
+              wrong
+              <br></br>
+              <button id = "right" type="button" class="btn btn-success" aria-label="Left Align">
+                <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+              </button>
+              typical
+              <br></br>
+
+              <button id = "difficult" type="button" class="btn btn-primary" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </button>
+              difficult
+              <br></br>
+
+              <button id = "uncertain" type="button" class="btn btn-warning" aria-label="Left Align">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              </button>
+              uncertain
+
+              <br></br>
+              <button id = "pos_next" type="button" class="btn btn-warning" aria-label="Left Align">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              </button>
+              pos&next
+              <br></br>
+              <button id = "neg_next" type="button" class="btn btn-warning" aria-label="Left Align">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              </button>
+              neg&next
+              <br></br>
+                <button id="next" type="button" class="btn btn-default">next</button>
+
+              <br></br>
+                <button id="pre" type="button" class="btn btn-default">pre</button>
+
+            </div>
+          </div>
+          </div>
+      </div>
+      <!-- 4 include the jQuery library -->
+      <script src="../static/bs/js/jquery.js"></script>
+      <!-- 5 include the minified jstree source -->
+      <script src="../static/dist/jstree.min.js"></script>
+
+      <script src="../static/bs/js/bootstrap.min.js"></script>
+      <!-- <script src="bs/js/npm.js"></script> -->
+
+      <script>
+      $(document).ready(function(){
+        id = {{id}};
+        col_num = 2;
+        image_num = 6;
+        p = 1;
+
+        showpage(id,p);
+        $("#next").click(function(){
+          {% if not session.logged_in %}
+          alert("please login in");
+          {% else %}
+          p = p+1;
+          showpage(id,p);
+          {% endif %}
+        });
+
+        $("#pos_next").click(function(){
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+                list[i].status = "right";
+              }
+            }
+            p = p+1;
+            showpage(id,p);
+        });
+        $("#neg_next").click(function(){
+            for (i=0; i<image_num;i++){
+              if(list[i].status == "unlabelled"){
+                list[i].status = "wrong";
+              }
+            }
+            p = p+1;
+            showpage(id,p);
+        });
+        $("#pre").click(function(){
+          {% if not session.logged_in %}
+          alert("please login in");
+          {% else %}
+          p = p-1;
+          showpage(id,p);
+          {% endif %}
+        });
+
+
+
+
+        // $(".col-choice").click(function(){
+        //   col_num = $(this).text();
+        //   alert(col_num);
+        //   col_split(col_num);
+        //   showpage(id,p);
+        //
+        // });
+        $("#change").click(function(){
+          var cols = document.getElementById("cols");
+          var col = cols.getElementsByTagName("DIV")[0];
+          for (i=0; i<2; i++)
+          {
+            cols.appendChild(col.cloneNode(true));
+          };
+          $(".col").removeClass().addClass("col-md-4");
+
+        });
+
+
+        $(".thumbnail").click(function(){
+
+          if($(this).hasClass("already")){
+            var r=confirm("are you sure to relabel it ?");
+            if (r==true)
+              {
+              list_relabel($(this).attr("id"));
+              $(this).removeClass("already");
+              $(this).css("background","white");
+              }
+          }
+          else {
+            if($(this).hasClass("on")){
+              $(this).removeClass("on");
+              $(this).css("background","white");
+            }
+            else{
+              $(this).css("background","red");
+              $(this).addClass("on");
+            }
+        }
+
+        });
+        $("#wrong").click(function(){
+          $(".on").each(function(){
+            list[find($(this).attr("id"))].status = "wrong";
+            $(this).removeClass("on");
+            $(this).addClass("already");
+            $(this).css("background","grey");
+            // alert($(this).attr("id")+list[find($(this).attr("id"))].status);
+          });
+        });
+        $("#right").click(function(){
+          $(".on").each(function(){
+            list[find($(this).attr("id"))].status = "right";
+            $(this).removeClass("on");
+            $(this).addClass("already");
+            $(this).css("background","MediumSeaGreen");
+            // alert($(this).attr("id")+list[find($(this).attr("id"))].status);
+          });
+        });
+        $("#difficult").click(function(){
+          $(".on").each(function(){
+            list[find($(this).attr("id"))].status = "difficult";
+            $(this).removeClass("on");
+            $(this).addClass("already");
+            $(this).css("background","SteelBlue");
+            // alert($(this).attr("id")+list[find($(this).attr("id"))].status);
+          });
+        });
+        $("#uncertain").click(function(){
+          $(".on").each(function(){
+            list[find($(this).attr("id"))].status = "uncertain";
+            $(this).removeClass("on");
+            $(this).addClass("already");
+            $(this).css("background","Peru");
+            // alert($(this).attr("id")+list[find($(this).attr("id"))].status);
+          });
+        });
+
+
+      });
+
+
+      // function col_split(num){
+      //   var cols = document.getElementById("cols");
+      //
+      //   var col = cols.getElementsByTagName("DIV")[0].cloneNode(true);
+      //
+      //   var tmp = document.getElementById("cols").childNodes;
+      //   while(tmp.length){
+      //     tmp[0].remove();
+      //   }
+      //
+      //   //一列有12/num个图片
+      //   var img = col.getElementsByTagName("A")[0].cloneNode(true);
+      //   var tmp = col.childNodes;
+      //   while(tmp.length){
+      //     tmp[0].remove();
+      //   }
+      //   for (i=0; i<image_num/num; i++){
+      //     col.appendChild(img.cloneNode(true));
+      //   }
+      //
+      //   //总共有 num列
+      //
+      //   for (i=0; i<num; i++)
+      //   {
+      //   cols.appendChild(col.cloneNode(true));
+      //
+      //   };
+      //   var c = "col-md-"+image_num/num+" col";
+      //   $(".col").removeClass().addClass(c);
+      //
+      // }
+      function list_relabel(id){
+        index = find(id);
+        if(index > -1){
+          list[index].status = "unlabelled";
+        }
+        alert(index+list[index].status);
+
+      }
+      function find(id){
+        for (i=0; i<list.length; i++){
+          if(list[i].id == id){
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      function showpage(category_id, page_id){
+        //输出整个列表信息
+        if (page_id > 1){
+          for (i=0; i<image_num;i++){
+            alert(list[i].status);
+          }
+          $.ajax({
+            url: "/Insert",
+            type: 'post',
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            data: JSON.stringify({'label':list}),
+            success: function(data) {
+              alert(data);
+            }
+          });
+
+        }
+
+        list = [];
+
+        $.get("/getImagePath", {id:category_id, page: page_id},function(result){
+
+          var jsonarray= $.parseJSON(result);
+          // alert(jsonarray['2_3']);
+
+          var i = 0;
+
+          $.each(jsonarray,function(index,value){
+            // alert(index);
+            $("img").eq(i).attr("src", value);
+
+            $(".thumbnail").eq(i).attr("id",index);
+            $(".thumbnail").eq(i).removeClass("already");
+            $(".thumbnail").eq(i).removeClass("on");
+            $(".thumbnail").eq(i).css("background","white");
+
+            image = new Object();
+            image.id=index;
+            image.status = "unlabelled";
+            list.push(image);
+            i = i + 1;
+          });
+          //尽量还是不要乱点没图片的！！！
+          for (;i<image_num;i++){
+            $("img").eq(i).attr("src", "../static/none.png");
+            index = "0_"+i;
+            //跟上面的一样！！！
+
+            $(".thumbnail").eq(i).attr("id",index);
+            $(".thumbnail").eq(i).removeClass("already");
+            $(".thumbnail").eq(i).removeClass("on");
+            $(".thumbnail").eq(i).css("background","white");
+            image = new Object();
+            image.id="0_"+i;
+            image.status = "unlabelled";
+            list.push(image);
+
+          }
+
+        });
+      }
+
+      </script>
+  </body>
+  </html>
